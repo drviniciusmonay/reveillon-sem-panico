@@ -51,6 +51,19 @@ h2 em{font-style:normal;color:var(--golddk)}
 .mock .tag b{display:block;font-size:22px;color:var(--golddk);line-height:1}
 .countdown{display:inline-flex;align-items:center;gap:10px;background:rgba(232,186,82,.12);border:1px solid rgba(232,186,82,.45);color:var(--gold2);padding:8px 14px;border-radius:12px;font-size:14px;font-weight:600}
 .countdown b{color:var(--gold);font-size:18px}
+/* MITO */
+.myth{background:#fff;border-bottom:1px solid var(--line)}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.vs>div{border-radius:16px;padding:20px 22px}
+.vs b{display:block;margin-bottom:8px;font-size:16px}
+.vs ul{list-style:none;margin:0;padding:0} .vs li{padding:6px 0 6px 26px;position:relative;font-size:16px}
+.vs .bad{background:#FBF3F3;border:1px solid #F1D6D6} .vs .bad b{color:var(--red)}
+.vs .bad li::before{content:"✕";position:absolute;left:2px;color:var(--red);font-weight:900}
+.vs .good{background:var(--mint);border:1px solid var(--line)} .vs .good b{color:var(--green)}
+.vs .good li::before{content:"✓";position:absolute;left:2px;color:var(--green);font-weight:900}
+.nu{display:flex;flex-wrap:wrap;gap:8px}
+.nu span{background:var(--night1);color:var(--gold2);border-radius:99px;padding:7px 14px;font-size:14px;font-weight:600}
+@media (max-width:860px){.vs{grid-template-columns:1fr}}
 /* DOR */
 .pain{background:var(--paper)}
 .scenes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:30px 0}
@@ -203,6 +216,20 @@ footer a{color:var(--gold2)}
   <div class="mock"><img src="assets/capa-guia.jpg" alt="Capa do guia Réveillon Sem Pânico" width="720" height="1280"><div class="tag"><b>70 páginas</b>para ler no celular</div></div>
 </div>
 </header>
+
+<section class="myth">
+<div class="wrap narrow reveal">
+  <span class="eyebrow">O erro mais comum</span>
+  <h2>Fechar o pet num quarto e torcer para ele não ouvir <em>não resolve</em></h2>
+  <p class="lead">O estouro atravessa portas e janelas, o chão vibra, o clarão entra pela fresta. Trancado e em pânico, o animal pode se machucar tentando sair, e o medo costuma ficar maior a cada ano.</p>
+  <div class="vs">
+    <div class="bad"><b>O que quase todo mundo faz</b><ul><li>Fecha a porta e aumenta a TV</li><li>Coloca algodão no ouvido</li><li>Dá um calmante na hora dos fogos</li><li>Espera passar</li></ul></div>
+    <div class="good"><b>O que muda a noite da virada</b><ul><li>Um plano começado com antecedência</li><li>Um refúgio que ele já conhece e gosta</li><li>Treino para o barulho virar coisa boa</li><li>Segurança contra fugas e um roteiro para a noite</li></ul></div>
+  </div>
+  <p style="margin:26px 0 10px;font-weight:700;color:var(--night2)">E esse plano precisa levar em conta as nuances do seu animal:</p>
+  <div class="nu"><span>Cão ou gato</span><span>Idade e saúde</span><span>Intensidade do medo</span><span>Tempo até a virada</span><span>Em casa ou viajando</span><span>Quem vai estar com ele</span></div>
+</div>
+</section>
 
 <section class="pain">
 <div class="wrap narrow reveal">
