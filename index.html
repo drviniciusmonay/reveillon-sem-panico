@@ -28,7 +28,7 @@ section{padding:72px 0}
 h2{font-size:clamp(28px,4.4vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 18px;color:var(--night2);font-weight:800}
 h2 em{font-style:normal;color:var(--golddk)}
 .lead{font-size:19px;color:#344234}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:var(--night0);font-weight:800;font-size:18px;text-decoration:none;padding:18px 30px;border-radius:14px;box-shadow:0 10px 30px rgba(232,186,82,.35);transition:transform .15s ease, box-shadow .15s ease;border:0;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;gap:10px;background:var(--gold);color:var(--night0);font-weight:800;font-size:18px;text-decoration:none;padding:18px 30px;border-radius:14px;box-shadow:0 10px 30px rgba(232,186,82,.35);transition:transform .15s ease, box-shadow .15s ease;border:0;cursor:pointer}
 .btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(232,186,82,.45)}
 .btn svg{width:20px;height:20px}
 .micro{font-size:13px;color:#C9D6C8;margin-top:12px;display:flex;gap:14px;flex-wrap:wrap}
@@ -189,7 +189,7 @@ footer a{color:var(--gold2)}
     <p class="sub">O plano passo a passo para o seu cão ou gato atravessar os fogos com segurança, do primeiro dia de treino até a noite da virada.</p>
     <div class="chips"><span>3 trilhas para o tempo que você tem</span><span>Vídeos de treino com som de fogos</span><span>Kit de fichas para imprimir</span></div>
     <a class="btn" href="#oferta" data-cta>Quero preparar meu pet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    <div class="micro"><span>Acesso imediato</span><span>Para cães e gatos</span><span>Garantia de 7 dias</span></div>
+    <div class="micro"><span>Acesso imediato</span><span>Pix ou até 12x no cartão</span><span>Garantia de 7 dias</span></div>
     <div class="by"><svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true"><g fill="none" stroke="#F3F1E6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
 <path d="M21 15c3-2 7-3 11-3s8 1 11 3c2 6 3 14 1 22-2 8-6 13-12 13s-10-5-12-13c-2-8-1-16 1-22z"/>
 <path d="M21 15c-6-1-12 4-13 14-1 8 1 14 5 15 4 1 6-4 6-11"/><path d="M43 15c6-1 12 4 13 14 1 8-1 14-5 15-4 1-6-4-6-11"/>
@@ -336,9 +336,9 @@ footer a{color:var(--gold2)}
   <div class="card">
     <div class="head"><img src="assets/capa-guia.jpg" alt=""><div><b>Réveillon Sem Pânico</b><span style="color:var(--mute);font-size:14px">Acesso completo, para cães e gatos</span></div></div>
     <ul><li>Guia completo de 70 páginas</li><li>Kit com 13 fichas para imprimir</li><li>Diário de Treino com calendário automático</li><li>4 vídeos de treino com som de fogos em 6 níveis</li><li>Ruído marrom para o ambiente, para baixar</li><li>Os produtos que eu indico, com o que procurar</li><li>Bônus: 10% na consultoria nutricional</li></ul>
-    <div class="price"><div class="v"><small>R$</small><span data-preco>47</span></div><div class="p" data-parcelas>pagamento único · acesso imediato</div></div>
+    <div class="price"><div class="v"><small>R$</small><span data-preco>47</span></div><div class="p"><span data-parcelas>pagamento único</span><br><span style="font-size:13px">à vista no Pix · acesso imediato</span></div></div>
     <a class="btn" href="#oferta" data-cta data-checkout>Quero o Réveillon Sem Pânico</a>
-    <div class="secure"><span>🔒 Pagamento seguro</span><span>✉️ Acesso por e-mail</span><span>💳 Pix ou cartão</span></div>
+    <div class="secure"><span>🔒 Pagamento seguro</span><span>✉️ Acesso por e-mail</span><span>💳 Pix ou até 12x no cartão</span></div>
   </div>
   <div class="guar"><div class="seal">7<small>DIAS</small></div><div><b style="color:var(--cream)">Garantia de 7 dias.</b> Se achar que o guia não é para você, pede o reembolso pela plataforma de pagamento e recebe 100% do valor de volta. Sem perguntas.</div></div>
 </div>
@@ -375,7 +375,7 @@ footer a{color:var(--gold2)}
 const CONFIG = {
   checkout: "",      // link do checkout da Kiwify, ex.: "https://pay.kiwify.com.br/XXXX"
   preco: "47",       // preço à vista, só o número
-  parcelas: "",      // opcional, ex.: "5x de R$ 10,51"
+  parcelas: "em até 12x no cartão",  // troque pelo valor exato da Kiwify, ex.: "em até 12x de R$ 4,86"
   pixel: ""          // ID do Pixel da Meta, só os números
 };
 
@@ -390,7 +390,7 @@ const CONFIG = {
   var on=document.querySelector('[data-trilha="'+t+'"]'); if(on) on.classList.add('on');
   // preço e checkout
   document.querySelectorAll('[data-preco]').forEach(function(e){e.textContent=CONFIG.preco});
-  if(CONFIG.parcelas) document.querySelectorAll('[data-parcelas]').forEach(function(e){e.textContent='ou '+CONFIG.parcelas});
+  if(CONFIG.parcelas) document.querySelectorAll('[data-parcelas]').forEach(function(e){e.innerHTML='ou <b style="color:var(--night2)">'+CONFIG.parcelas+'</b>'});
   if(CONFIG.checkout){ document.querySelectorAll('[data-checkout]').forEach(function(a){a.href=CONFIG.checkout+(location.search||'');a.target='_self'}); }
   // Pixel da Meta
   if(CONFIG.pixel){
