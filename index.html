@@ -38,9 +38,10 @@ h2 em{font-style:normal;color:var(--golddk)}
 .hero svg.sky{position:absolute;inset:0;width:100%;height:100%;opacity:.95}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,18,10,.92) 0%,rgba(5,18,10,.7) 46%,rgba(5,18,10,.15) 100%)}
 .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:80px}
-.hero h1{margin:14px 0 0;font-size:clamp(46px,8vw,84px);line-height:.92;letter-spacing:-.03em;font-weight:900}
+.hero h1{margin:16px 0 0;font-size:clamp(40px,6.4vw,70px);line-height:.98;letter-spacing:-.03em;font-weight:900}
+.hero .brand{display:inline-block;margin-top:20px;font-size:clamp(18px,2.2vw,22px);font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--cream);border-left:4px solid var(--gold);padding:2px 0 2px 12px} .hero .brand b{color:var(--gold)}
 .hero h1 em{font-style:normal;color:var(--gold);display:block}
-.hero .sub{font-size:clamp(18px,2.2vw,21px);color:#DCE6DA;margin:22px 0 26px;max-width:560px}
+.hero .sub{font-size:clamp(18px,2.2vw,21px);color:#DCE6DA;margin:16px 0 26px;max-width:560px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 30px}
 .chips span{border:1px solid rgba(232,186,82,.6);color:var(--gold2);border-radius:99px;padding:6px 14px;font-size:14px;font-weight:600;background:rgba(5,18,10,.4)}
 .hero .by{display:flex;align-items:center;gap:12px;margin-top:28px;font-size:14px;color:#C9D6C8}
@@ -198,11 +199,12 @@ footer a{color:var(--gold2)}
 <div class="wrap">
   <div>
     <span class="countdown" id="cd">Faltam <b data-dias>poucas</b> dias para a virada</span>
-    <h1>Réveillon <em>Sem Pânico</em></h1>
-    <p class="sub">O plano passo a passo para o seu cão ou gato atravessar os fogos com segurança, do primeiro dia de treino até a noite da virada.</p>
+    <h1>Chega de virada com o seu pet <em>tremendo de medo</em></h1>
+    <div class="brand">Réveillon <b>Sem Pânico</b></div>
+    <p class="sub">O plano passo a passo, criado por um Médico Veterinário, para o seu cão ou gato atravessar os fogos com segurança, do primeiro dia de treino até a noite da virada.</p>
     <div class="chips"><span>3 trilhas para o tempo que você tem</span><span>Vídeos de treino com som de fogos</span><span>Kit de fichas para imprimir</span></div>
     <a class="btn" href="#oferta" data-cta>Quero preparar meu pet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    <div class="micro"><span>Acesso imediato</span><span>Pix ou até 12x no cartão</span><span>Garantia de 7 dias</span></div>
+    <div class="micro"><span>Acesso imediato</span><span>Pix ou até 6x no cartão</span><span>Garantia de 7 dias</span></div>
     <div class="by"><svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true"><g fill="none" stroke="#F3F1E6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
 <path d="M21 15c3-2 7-3 11-3s8 1 11 3c2 6 3 14 1 22-2 8-6 13-12 13s-10-5-12-13c-2-8-1-16 1-22z"/>
 <path d="M21 15c-6-1-12 4-13 14-1 8 1 14 5 15 4 1 6-4 6-11"/><path d="M43 15c6-1 12 4 13 14 1 8-1 14-5 15-4 1-6-4-6-11"/>
@@ -365,7 +367,7 @@ footer a{color:var(--gold2)}
     <ul><li>Guia completo de 70 páginas</li><li>Kit com 13 fichas para imprimir</li><li>Diário de Treino com calendário automático</li><li>4 vídeos de treino com som de fogos em 6 níveis</li><li>Ruído marrom para o ambiente, para baixar</li><li>Os produtos que eu indico, com o que procurar</li><li>Bônus: 10% na consultoria nutricional</li></ul>
     <div class="price"><div class="v"><small>R$</small><span data-preco>47</span></div><div class="p"><span data-parcelas>pagamento único</span><br><span style="font-size:13px">à vista no Pix · acesso imediato</span></div></div>
     <a class="btn" href="#oferta" data-cta data-checkout>Quero o Réveillon Sem Pânico</a>
-    <div class="secure"><span>🔒 Pagamento seguro</span><span>✉️ Acesso por e-mail</span><span>💳 Pix ou até 12x no cartão</span></div>
+    <div class="secure"><span>🔒 Pagamento seguro</span><span>✉️ Acesso por e-mail</span><span>💳 Pix ou até 6x no cartão</span></div>
   </div>
   <div class="guar"><div class="seal">7<small>DIAS</small></div><div><b style="color:var(--cream)">Garantia de 7 dias.</b> Se achar que o guia não é para você, pede o reembolso pela plataforma de pagamento e recebe 100% do valor de volta. Sem perguntas.</div></div>
 </div>
@@ -402,7 +404,7 @@ footer a{color:var(--gold2)}
 const CONFIG = {
   checkout: "https://pay.kiwify.com.br/F8LB1Db",  // link do checkout da Kiwify
   preco: "47",       // preço à vista, só o número
-  parcelas: "em até 12x no cartão",  // troque pelo valor exato da Kiwify, ex.: "em até 12x de R$ 4,86"
+  parcelas: "em até 6x no cartão",  // ex.: "em até 6x de R$ 8,50"
   pixel: ""          // ID do Pixel da Meta, só os números
 };
 
